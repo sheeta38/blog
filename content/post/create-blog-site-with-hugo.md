@@ -120,3 +120,13 @@ C:\Users\lily4\Documents\blog\content\post\my-first-post.md created
 ```
 PS C:\Users\lily4\Documents\blog> hugo server
 ```
+
+
+## gitにステージして公開
+
+```
+PS C:\Users\lily4\Documents\blog> git config --global user.useConfigOnly true
+PS C:\Users\lily4\Documents\blog> git config user.name "Sheeta Sakuramachi"
+PS C:\Users\lily4\Documents\blog> git config user.email "atan.sheeta@icloud.com"
+PS C:\Users\lily4\Documents\blog> git add *
+```

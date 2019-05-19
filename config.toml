@@ -1,0 +1,11 @@
+baseURL = "https://example.org/"
+languageCode = "ja-jp"
+title = "桜町記録片"
+theme = "jeffprod"
+
+[permalinks]
+    post = "/:year/:filename"
+
+[taxonomies]
+    tag = "tags"
+    archive = "archives"

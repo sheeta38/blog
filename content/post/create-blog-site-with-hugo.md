@@ -146,3 +146,6 @@ Merge made by the 'recursive' strategy.
  1 file changed, 1 insertion(+)
  create mode 100644 README.md
 ```
+
+とりあえずトップページができたが、記事へのリンクが機能しない.
+

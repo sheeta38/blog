@@ -1,21 +1,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>2019 on 桜町記録片</title>
-    <link>https://example.org/archives/2019/</link>
-    <description>Recent content in 2019 on 桜町記録片</description>
+    <title>桜町記録片</title>
+    <link>https://sheeta38.github.io/</link>
+    <description>Recent content on 桜町記録片</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sun, 19 May 2019 11:07:47 +0900</lastBuildDate>
     
-        <atom:link href="https://example.org/archives/2019/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://sheeta38.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo &#43; Github Pges でブログを作る</title>
-      <link>https://example.org/2019/create-blog-site-with-hugo/</link>
+      <link>https://sheeta38.github.io/2019/create-blog-site-with-hugo/</link>
       <pubDate>Sun, 19 May 2019 11:07:47 +0900</pubDate>
       
-      <guid>https://example.org/2019/create-blog-site-with-hugo/</guid>
+      <guid>https://sheeta38.github.io/2019/create-blog-site-with-hugo/</guid>
       <description>&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -28,10 +28,10 @@
     
     <item>
       <title>片麻痺患者の作業環境</title>
-      <link>https://example.org/2019/my-first-post/</link>
+      <link>https://sheeta38.github.io/2019/my-first-post/</link>
       <pubDate>Sun, 19 May 2019 10:36:39 +0900</pubDate>
       
-      <guid>https://example.org/2019/my-first-post/</guid>
+      <guid>https://sheeta38.github.io/2019/my-first-post/</guid>
       <description>&lt;p&gt;世の中の殆どの人間にとっては関係のない情報である。そもそも当事者の数が限られているためか、こういった題材を取り上げる記事を見かけることは殆ど無い。
 ただまあ、こういうにんげんもいるんだという記録です。&lt;/p&gt;
 

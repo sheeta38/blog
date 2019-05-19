@@ -1,7 +1,10 @@
-baseURL = "https://example.org/"
-languageCode = "ja-jp"
+baseURL = "https://sheeta38.github.io/"
+author = "Sheeta Sakuramachi"
 title = "桜町記録片"
 theme = "jeffprod"
+publishDir = "docs"
+hasCJKLanguage = true
+languageCode = "ja-jp"
 
 [permalinks]
     post = "/:year/:filename"

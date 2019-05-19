@@ -130,3 +130,19 @@ PS C:\Users\lily4\Documents\blog> git config user.name "Sheeta Sakuramachi"
 PS C:\Users\lily4\Documents\blog> git config user.email "atan.sheeta@icloud.com"
 PS C:\Users\lily4\Documents\blog> git add *
 ```
+
+Pushして公開といきたかったけれど、リモートとローカルを同期するフェーズで少し難儀する。
+
+```
+PS C:\Users\lily4\Documents\blog> git pull origin master
+From https://github.com/sheeta38/my-blog
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+PS C:\Users\lily4\Documents\blog> git merge origin/master
+fatal: refusing to merge unrelated histories
+PS C:\Users\lily4\Documents\blog> git merge origin/master --allow-unrelated-histories
+Merge made by the 'recursive' strategy.
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+```

@@ -9,6 +9,7 @@ author: Sheeta Sakuramachi
 ## 前提
 
 - Windows10
+- コマンドライン操作はPowerShellを用いる
 - gitをインストール済み
 
 <!--001-->
@@ -87,7 +88,7 @@ Receiving objects: 100% (199/199), 1.64 MiB | 2.09 MiB/s, done.
 Resolving deltas: 100% (92/92), done.
 ```
 
-```config.toml```を次の内容に変える
+```config.toml```を次の内容に変える。
 
 ```
 PS C:\Users\lily4\Documents\blog> code config.toml
@@ -95,10 +96,8 @@ PS C:\Users\lily4\Documents\blog> code config.toml
 
 ```
 theme = "jeffprod"
-
 [permalinks]
     post = "/:year/:filename"
-
 [taxonomies]
     tag = "tags"
     archive = "archives"
@@ -149,3 +148,12 @@ Merge made by the 'recursive' strategy.
 
 とりあえずトップページができたが、記事へのリンクが機能しない.
 
+.nojekyll ファイルを追加してmasterにコミットしてpushすれば解決した。
+
+https://help.github.com/en/articles/files-that-start-with-an-underscore-are-missing
+
+## 現状の課題
+
+- 公開用のファイルとMarkdownファイルが1個のレポジトリに収まっていることが微妙。```git submodule```を使ってこの辺をよしなにする方法があるようなので、その気になったら対策を考える。
+- 記事を書いて```hugo```して```git add```して```commit```して```push```してという操作は面倒なのでいずれ自動化したい。
+ 

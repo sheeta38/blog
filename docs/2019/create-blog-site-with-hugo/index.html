@@ -50,6 +50,7 @@
 
 <ul>
 <li>Windows10</li>
+<li>コマンドライン操作はPowerShellを用いる</li>
 <li>gitをインストール済み</li>
 </ul>
 
@@ -128,70 +129,66 @@ Receiving objects: 100% (199/199), 1.64 MiB | 2.09 MiB/s, done.
 Resolving deltas: 100% (92/92), done.
 </code></pre>
 
-<pre><code class="language-config.toml```を次の内容に変える">
+<p>次に<code>config.toml</code>を次の内容に変える。</p>
+
+<pre><code>theme = &quot;jeffprod&quot;
+[permalinks]
+    post = &quot;/:year/:filename&quot;
+[taxonomies]
+    tag = &quot;tags&quot;
+    archive = &quot;archives&quot;
 </code></pre>
 
-<p>PS C:\Users\lily4\Documents\blog&gt; code config.toml</p>
+<h3 id="記事を追加">記事を追加</h3>
 
-<pre><code>
+<pre><code>PS C:\Users\lily4\Documents\blog&gt; hugo new post/my-first-post.md
+C:\Users\lily4\Documents\blog\content\post\my-first-post.md created
 </code></pre>
 
-<p>theme = &ldquo;jeffprod&rdquo;</p>
+<p>
+  <img src="@attachment/vscode.png">
+</p>
 
-<p>[permalinks]
-    post = &ldquo;/:year/:filename&rdquo;</p>
+<h3 id="表示テスト">表示テスト</h3>
 
-<p>[taxonomies]
-    tag = &ldquo;tags&rdquo;
-    archive = &ldquo;archives&rdquo;</p>
-
-<pre><code>
-### 記事を追加
-
+<pre><code>PS C:\Users\lily4\Documents\blog&gt; hugo server
 </code></pre>
 
-<p>PS C:\Users\lily4\Documents\blog&gt; hugo new post/my-first-post.md
-C:\Users\lily4\Documents\blog\content\post\my-first-post.md created</p>
+<h2 id="gitにステージして公開">gitにステージして公開</h2>
 
-<pre><code>
-&lt;p&gt;
-  &lt;img src=&quot;@attachment/vscode.png&quot;&gt;
-&lt;/p&gt;
-
-### 表示テスト
-
+<pre><code>PS C:\Users\lily4\Documents\blog&gt; git config --global user.useConfigOnly true
+PS C:\Users\lily4\Documents\blog&gt; git config user.name &quot;Sheeta Sakuramachi&quot;
+PS C:\Users\lily4\Documents\blog&gt; git config user.email &quot;atan.sheeta@icloud.com&quot;
+PS C:\Users\lily4\Documents\blog&gt; git add *
 </code></pre>
 
-<p>PS C:\Users\lily4\Documents\blog&gt; hugo server</p>
+<p>Pushして公開といきたかったけれど、リモートとローカルを同期するフェーズで少し難儀する。</p>
 
-<pre><code>
-
-## gitにステージして公開
-
-</code></pre>
-
-<p>PS C:\Users\lily4\Documents\blog&gt; git config &ndash;global user.useConfigOnly true
-PS C:\Users\lily4\Documents\blog&gt; git config user.name &ldquo;Sheeta Sakuramachi&rdquo;
-PS C:\Users\lily4\Documents\blog&gt; git config user.email &ldquo;atan.sheeta@icloud.com&rdquo;
-PS C:\Users\lily4\Documents\blog&gt; git add *</p>
-
-<pre><code>
-Pushして公開といきたかったけれど、リモートとローカルを同期するフェーズで少し難儀する。
-
-</code></pre>
-
-<p>PS C:\Users\lily4\Documents\blog&gt; git pull origin master
-From <a href="https://github.com/sheeta38/my-blog">https://github.com/sheeta38/my-blog</a>
+<pre><code>PS C:\Users\lily4\Documents\blog&gt; git pull origin master
+From https://github.com/sheeta38/my-blog
  * branch            master     -&gt; FETCH_HEAD
 fatal: refusing to merge unrelated histories
 PS C:\Users\lily4\Documents\blog&gt; git merge origin/master
 fatal: refusing to merge unrelated histories
-PS C:\Users\lily4\Documents\blog&gt; git merge origin/master &ndash;allow-unrelated-histories
-Merge made by the &lsquo;recursive&rsquo; strategy.
+PS C:\Users\lily4\Documents\blog&gt; git merge origin/master --allow-unrelated-histories
+Merge made by the 'recursive' strategy.
  README.md | 1 +
  1 file changed, 1 insertion(+)
  create mode 100644 README.md
-```</p>
+</code></pre>
+
+<p>とりあえずトップページができたが、記事へのリンクが機能しない.</p>
+
+<p>.nojekyll ファイルを追加してmasterにコミットしてpushすれば解決した。</p>
+
+<p><a href="https://help.github.com/en/articles/files-that-start-with-an-underscore-are-missing">https://help.github.com/en/articles/files-that-start-with-an-underscore-are-missing</a></p>
+
+<h2 id="現状の課題">現状の課題</h2>
+
+<ul>
+<li>公開用のファイルとMarkdownファイルが1個のレポジトリに収まっていることが微妙。<code>git submodule</code>を使ってこの辺をよしなにする方法があるようなので、その気になったら対策を考える。</li>
+<li>記事を書いて<code>hugo</code>して<code>git add</code>して<code>commit</code>して<code>push</code>してという操作は面倒なのでいずれ自動化したい。</li>
+</ul>
             </div>
         </div>
     </div>

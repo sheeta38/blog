@@ -88,11 +88,7 @@ Receiving objects: 100% (199/199), 1.64 MiB | 2.09 MiB/s, done.
 Resolving deltas: 100% (92/92), done.
 ```
 
-```config.toml```を次の内容に変える。
-
-```
-PS C:\Users\lily4\Documents\blog> code config.toml
-```
+次に```config.toml```を次の内容に変える。
 
 ```
 theme = "jeffprod"

@@ -31,7 +31,11 @@ jobs:
           name: Building blog pages
           command: |
             HUGO_ENV=production hugo -v
+<<<<<<< HEAD
 #            cp public/index.xml public/feed.xml
+=======
+            cp public/index.xml public/feed.xml
+>>>>>>> f361af99bc5f5d8dd470f6f3de3ab9dd7f015ae3
       - add_ssh_keys:
           fingerprints:
             - "SO:ME:FIN:G:ER:PR:IN:T"

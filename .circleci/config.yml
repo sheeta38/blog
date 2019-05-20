@@ -31,10 +31,11 @@ jobs:
           name: Building blog pages
           command: |
             HUGO_ENV=production hugo -v
-#            cp public/index.xml public/feed.xml
       - add_ssh_keys:
           fingerprints:
-            - "SO:ME:FIN:G:ER:PR:IN:T"
+            - "de:61:99:d6:58:1e:92:0d:0d:32:da:23:c9:ab:4f:0b"
       - deploy:
           name: Deploy to GitHub Pages
-          command: ./.circleci/deploy.sh
+          command: |
+            chmod 700 ./.circleci/deploy.sh
+            ./.circleci/deploy.sh

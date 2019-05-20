@@ -30,7 +30,7 @@ jobs:
       - run:
           name: Building blog pages
           command: |
-            HUGO_ENV=production hugo
+            hugo -v
       - add_ssh_keys:
           fingerprints:
             - "de:61:99:d6:58:1e:92:0d:0d:32:da:23:c9:ab:4f:0b"

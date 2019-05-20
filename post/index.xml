@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 桜町記録片</title>
+    <link>https://sheeta38.github.io/blog/post/</link>
+    <description>Recent content in Posts on 桜町記録片</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sun, 19 May 2019 11:07:47 +0900</lastBuildDate>
+    
+	<atom:link href="https://sheeta38.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo &#43; Github Pges でブログを作る</title>
+      <link>https://sheeta38.github.io/blog/2019/create-blog-site-with-hugo/</link>
+      <pubDate>Sun, 19 May 2019 11:07:47 +0900</pubDate>
+      
+      <guid>https://sheeta38.github.io/blog/2019/create-blog-site-with-hugo/</guid>
+      <description>&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Windows10&lt;/li&gt;
+&lt;li&gt;コマンドライン操作はPowerShellを用いる&lt;/li&gt;
+&lt;li&gt;gitをインストール済み&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--001--&gt;</description>
+    </item>
+    
+    <item>
+      <title>片麻痺患者のPC作業環境</title>
+      <link>https://sheeta38.github.io/blog/2019/left-hand-writing/</link>
+      <pubDate>Sun, 19 May 2019 10:36:39 +0900</pubDate>
+      
+      <guid>https://sheeta38.github.io/blog/2019/left-hand-writing/</guid>
+      <description>&lt;p&gt;世の中の殆どの人間にとっては関係のない情報である。そもそも当事者の数が限られているためか、こういった題材を取り上げる記事を見かけることは殆ど無い。
+ただまあ、こういうにんげんもいるんだという記録です。&lt;/p&gt;
+
+&lt;!--001--&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

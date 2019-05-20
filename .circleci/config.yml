@@ -6,7 +6,7 @@ jobs:
   build:
     docker:
       # specify the version
-      - image: circleci/golang:1.9
+      - image: cibuilds/hugo:latest
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -17,26 +17,24 @@ jobs:
     #### expecting it in the form of
     ####   /go/src/github.com/circleci/go-tool
     ####   /go/src/bitbucket.org/circleci/go-tool
-    working_directory: /go/src/github.com/{{ORG_NAME}}/{{REPO_NAME}}
+
+    working_directory: ~/hugo
     steps:
+      - run:
+          name: Update enviroment
+          command: apk update && apk add git
+      - run:
+          name: Hugo version
+          command: echo "$(hugo version)"
       - checkout
       - run:
-          name: hugo install
+          name: Building blog pages
           command: |
-              go get -v github.com/spf13/hugo
-              git config --global user.name "sheeta38"
-              git config --global user.email "atan.sheeta@icloud.com"
-
-      - run:
-          name: push to master
-          command: |
-              hugo
-              git clone https://github.com/sheeta38/blog.git
-              ls
-              cp -rp public/* blog/
-              cd ryoma-tokushige.github.io
-              ls
-              git remote set-url origin git@github.com:sheeta38/blog.git
-              git add .
-              git commit -m "[ci skip] publish"
-              git push origin master
+            HUGO_ENV=production hugo -v
+#            cp public/index.xml public/feed.xml
+      - add_ssh_keys:
+          fingerprints:
+            - "SO:ME:FIN:G:ER:PR:IN:T"
+      - deploy:
+          name: Deploy to GitHub Pages
+          command: ./.circleci/deploy.sh

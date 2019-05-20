@@ -1,5 +1,5 @@
 baseURL = "https://sheeta38.github.io/blog/"
-author = "Sheeta Sakuramachi"
+author = "sheeta38"
 title = "桜町記録片"
 theme = "jeffprod"
 publishDir = "docs"

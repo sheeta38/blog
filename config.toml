@@ -1,0 +1,14 @@
+baseURL = "https://sheeta38.github.io/blog/"
+author = "sheeta38"
+title = "桜町記録片"
+theme = "jeffprod"
+publishDir = "docs"
+hasCJKLanguage = true
+languageCode = "ja"
+
+[permalinks]
+    post = "/:year/:filename"
+
+[taxonomies]
+    tag = "tags"
+    archive = "archives"

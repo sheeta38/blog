@@ -30,7 +30,9 @@ jobs:
       - run:
           name: Building blog pages
           command: |
-            ls -r themes/
+            cd themes/jeffprod
+            git pull
+            cd ../../
             HUGO_ENV=production hugo -v
       - add_ssh_keys:
           fingerprints:

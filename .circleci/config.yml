@@ -30,8 +30,7 @@ jobs:
       - run:
           name: Building blog pages
           command: |
-            ls content/post
-            cat config.toml
+            ls themes/
             HUGO_ENV=production hugo -v
       - add_ssh_keys:
           fingerprints:

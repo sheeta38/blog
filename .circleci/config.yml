@@ -30,7 +30,7 @@ jobs:
       - run:
           name: Building blog pages
           command: |
-            git clone https://github.com/Tazeg/hugo-blog-jeffprod.git themes/jeffprod
+            git submodule update
             HUGO_ENV=production hugo -v
       - add_ssh_keys:
           fingerprints:

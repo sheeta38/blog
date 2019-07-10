@@ -6,9 +6,43 @@ publishDir = "docs"
 hasCJKLanguage = true
 languageCode = "ja"
 
+
+# Disable comments by leaving disqusShortname empty
+disqusShortname = "your disqus shortname"
+copyright = "Copyright © 2019, Sheeta Sakuramachi"
+canonifyURLS = true
+paginate = 12
+
+[params]
+author = "Sheeta Sakuramachi"
+bio = "An otaku."
+logo = "/images/onepress-logo.png"
+avatar = "/images/avatar.jpg"
+opengraphImage = "/images/onepress-logo.jpg"
+enableRSS = true
+
+customCSS = false
+readMore = "Read More"
+
+# Social
+twitter  = "https://twitter.com/sheeta_mm"
+github   = "https://github.com/sheeta38"
+facebook  = ""
+linkedin  = ""
+
+# Widget
+widgets = true
+
+# Author box and Share button
+authorCard = false 
+shareButton = true
+
+# Code highlighting with highlight.js
+highlightJS = true
+
 [permalinks]
-    post = "/:year/:filename"
+post = "/:year/:filename"
 
 [taxonomies]
-    tag = "tags"
-    archive = "archives"
+tag = "tags"
+archive = "archives"

@@ -9,22 +9,22 @@ author: Sheeta Sakuramachi
 ## 前提
 
 - Windows10
-- コマンドライン操作はPowerShellを用いる
-- gitをインストール済み
+- コマンドライン操作は PowerShell を用いる
+- git をインストール済み
 
 <!--001-->
 <!--more-->
 
-## Hugoをインストール
+## Hugo をインストール
 
 [Install Hugo](https://gohugo.io/getting-started/installing)
 
+Windows では[Chocolatey](https://chocolatey.org/)というパッケージマネージャを使ってインストールせよとのことなのでインストール。
 
-Windowsでは[Chocolatey](https://chocolatey.org/)というパッケージマネージャを使ってインストールせよとのことなのでインストール。
-
-hugoをインストール
+hugo をインストール
 
 結果
+
 ```
 PS C:\Windows\system32> choco install hugo -confirm
 Chocolatey v0.10.13
@@ -53,9 +53,10 @@ PS C:\Windows\system32>
 
 ## ローカルで新しいサイトを作成
 
-## hugoコマンドでサイトを作成
+## hugo コマンドでサイトを作成
 
 結果
+
 ```
 PS C:\Users\lily4>
 Congratulations! Your new Hugo site is created in C:\Windows\system32\blog.
@@ -88,7 +89,7 @@ Receiving objects: 100% (199/199), 1.64 MiB | 2.09 MiB/s, done.
 Resolving deltas: 100% (92/92), done.
 ```
 
-次に```config.toml```を次の内容に変える。
+次に`config.toml`を次の内容に変える。
 
 ```
 theme = "jeffprod"
@@ -116,8 +117,7 @@ C:\Users\lily4\Documents\blog\content\post\my-first-post.md created
 PS C:\Users\lily4\Documents\blog> hugo server
 ```
 
-
-## gitにステージして公開
+## git にステージして公開
 
 ```
 PS C:\Users\lily4\Documents\blog> git config --global user.useConfigOnly true
@@ -126,7 +126,7 @@ PS C:\Users\lily4\Documents\blog> git config user.email "atan.sheeta@icloud.com"
 PS C:\Users\lily4\Documents\blog> git add *
 ```
 
-Pushして公開といきたかったけれど、リモートとローカルを同期するフェーズで少し難儀する。
+Push して公開といきたかったけれど、リモートとローカルを同期するフェーズで少し難儀する。
 
 ```
 PS C:\Users\lily4\Documents\blog> git pull origin master
@@ -144,11 +144,11 @@ Merge made by the 'recursive' strategy.
 
 とりあえずトップページができたが、記事へのリンクが機能しない.
 
-.nojekyll ファイルを追加してmasterにコミットしてpushすれば解決した。
+.nojekyll ファイルを追加して master にコミットして push すれば解決した。
 
 https://help.github.com/en/articles/files-that-start-with-an-underscore-are-missing
 
 ## 現状の課題
 
-- 公開用のファイルとMarkdownファイルが1個のレポジトリに収まっていることが微妙。```git submodule```を使ってこの辺をよしなにする方法があるようなので、その気になったら対策を考える。
-- 記事を書いて```hugo```して```git add```して```commit```して```push```してという操作は面倒なのでいずれ自動化したい。
+- 公開用のファイルと Markdown ファイルが 1 個のレポジトリに収まっていることが微妙。`git submodule`を使ってこの辺をよしなにする方法があるようなので、その気になったら対策を考える。
+- 記事を書いて`hugo`して`git add`して`commit`して`push`してという操作は面倒なのでいずれ自動化したい。

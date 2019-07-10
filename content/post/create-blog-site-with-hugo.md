@@ -17,13 +17,13 @@ author: Sheeta Sakuramachi
 
 ## Hugoをインストール
 
-Install Hugo[https://gohugo.io/getting-started/installing]
+[Install Hugo](https://gohugo.io/getting-started/installing)
 
-### パッケージマネージャをインストール
 
-Windowsでは[Chocolatey](https://chocolatey.org/)というパッケージマネージャを使ってインストールせよとのことです。
+Windowsでは[Chocolatey](https://chocolatey.org/)というパッケージマネージャを使ってインストールせよとのことなのでインストール。
 
-### hugoをインストール
+hugoをインストール
+
 結果
 ```
 PS C:\Windows\system32> choco install hugo -confirm
@@ -152,4 +152,3 @@ https://help.github.com/en/articles/files-that-start-with-an-underscore-are-miss
 
 - 公開用のファイルとMarkdownファイルが1個のレポジトリに収まっていることが微妙。```git submodule```を使ってこの辺をよしなにする方法があるようなので、その気になったら対策を考える。
 - 記事を書いて```hugo```して```git add```して```commit```して```push```してという操作は面倒なのでいずれ自動化したい。
- 

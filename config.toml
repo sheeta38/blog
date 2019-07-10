@@ -4,7 +4,7 @@ title = "桜町記録片"
 theme = "jeffprod"
 publishDir = "docs"
 hasCJKLanguage = true
-languageCode = "ja-jp"
+languageCode = "ja"
 
 [permalinks]
     post = "/:year/:filename"

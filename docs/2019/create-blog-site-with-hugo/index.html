@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +11,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
     <link rel="stylesheet" href="https://sheeta38.github.io/blog/css/blog.css" />
+    <link rel="stylesheet" href="https://sheeta38.github.io/blog/css/custom.css" />
     
 </head>
+
 <body>
 
     
@@ -28,15 +31,12 @@
             <div class="container has-text-centered">
                 <br>
                 <h1 class="title is-size-1">
-                    
-                        Hugo &#43; Github Pges でブログを作る
-                    
+                    桜町記録片
                 </h1>
                 
             </div>
         </div>
     </section>
-
 
 <div class="container">
     <div class="section">
@@ -46,23 +46,24 @@
     <div class="column is-9">
         <div class="tile is-child box">
             <div class="content">
+                <h1 class="article-title">Hugo &#43; Github Pges でブログを作る</h1>
                 <h2 id="前提">前提</h2>
 
 <ul>
 <li>Windows10</li>
-<li>コマンドライン操作はPowerShellを用いる</li>
-<li>gitをインストール済み</li>
+<li>コマンドライン操作は PowerShell を用いる</li>
+<li>git をインストール済み</li>
 </ul>
 
 <!--001-->
 
-<h2 id="hugoをインストール">Hugoをインストール</h2>
+<h2 id="hugo-をインストール">Hugo をインストール</h2>
 
 <p><a href="https://gohugo.io/getting-started/installing">Install Hugo</a></p>
 
-<p>Windowsでは<a href="https://chocolatey.org/">Chocolatey</a>というパッケージマネージャを使ってインストールせよとのことなのでインストール。</p>
+<p>Windows では<a href="https://chocolatey.org/">Chocolatey</a>というパッケージマネージャを使ってインストールせよとのことなのでインストール。</p>
 
-<p>hugoをインストール</p>
+<p>hugo をインストール</p>
 
 <p>結果</p>
 
@@ -93,7 +94,7 @@ PS C:\Windows\system32&gt;
 
 <h2 id="ローカルで新しいサイトを作成">ローカルで新しいサイトを作成</h2>
 
-<h2 id="hugoコマンドでサイトを作成">hugoコマンドでサイトを作成</h2>
+<h2 id="hugo-コマンドでサイトを作成">hugo コマンドでサイトを作成</h2>
 
 <p>結果</p>
 
@@ -152,7 +153,7 @@ C:\Users\lily4\Documents\blog\content\post\my-first-post.md created
 <pre><code>PS C:\Users\lily4\Documents\blog&gt; hugo server
 </code></pre>
 
-<h2 id="gitにステージして公開">gitにステージして公開</h2>
+<h2 id="git-にステージして公開">git にステージして公開</h2>
 
 <pre><code>PS C:\Users\lily4\Documents\blog&gt; git config --global user.useConfigOnly true
 PS C:\Users\lily4\Documents\blog&gt; git config user.name &quot;Sheeta Sakuramachi&quot;
@@ -160,7 +161,7 @@ PS C:\Users\lily4\Documents\blog&gt; git config user.email &quot;atan.sheeta@icl
 PS C:\Users\lily4\Documents\blog&gt; git add *
 </code></pre>
 
-<p>Pushして公開といきたかったけれど、リモートとローカルを同期するフェーズで少し難儀する。</p>
+<p>Push して公開といきたかったけれど、リモートとローカルを同期するフェーズで少し難儀する。</p>
 
 <pre><code>PS C:\Users\lily4\Documents\blog&gt; git pull origin master
 From https://github.com/sheeta38/my-blog
@@ -177,14 +178,14 @@ Merge made by the 'recursive' strategy.
 
 <p>とりあえずトップページができたが、記事へのリンクが機能しない.</p>
 
-<p>.nojekyll ファイルを追加してmasterにコミットしてpushすれば解決した。</p>
+<p>.nojekyll ファイルを追加して master にコミットして push すれば解決した。</p>
 
 <p><a href="https://help.github.com/en/articles/files-that-start-with-an-underscore-are-missing">https://help.github.com/en/articles/files-that-start-with-an-underscore-are-missing</a></p>
 
 <h2 id="現状の課題">現状の課題</h2>
 
 <ul>
-<li>公開用のファイルとMarkdownファイルが1個のレポジトリに収まっていることが微妙。<code>git submodule</code>を使ってこの辺をよしなにする方法があるようなので、その気になったら対策を考える。</li>
+<li>公開用のファイルと Markdown ファイルが 1 個のレポジトリに収まっていることが微妙。<code>git submodule</code>を使ってこの辺をよしなにする方法があるようなので、その気になったら対策を考える。</li>
 <li>記事を書いて<code>hugo</code>して<code>git add</code>して<code>commit</code>して<code>push</code>してという操作は面倒なのでいずれ自動化したい。</li>
 </ul>
             </div>
@@ -239,11 +240,13 @@ Merge made by the 'recursive' strategy.
 <footer class="footer has-background-grey-darker has-text-white">
     <div class="content has-text-centered">
         <p>
-            <span class="icon is-large"><a href="https://twitter.com/" class="mysocial" rel="me"><i class="fab fa-twitter fa-3x"></i></a></span>&nbsp;&nbsp;
-            <span class="icon is-large"><a href="https://www.youtube.com/" class="mysocial" rel="me"><i class="fab fa-youtube fa-3x"></i></a></span>&nbsp;&nbsp;
-            <span class="icon is-large"><a href="https://github.com/" class="mysocial" rel="me"><i class="fab fa-github fa-3x"></i></a></span>&nbsp;&nbsp;
+            <span class="icon is-large"><a href="https://twitter.com/sheeta_mm" class="mysocial" rel="me"><i
+                        class="fab fa-twitter fa-3x"></i></a></span>&nbsp;&nbsp;
+            <span class="icon is-large"><a href="https://github.com/sheeta38" class="mysocial" rel="me"><i
+                        class="fab fa-github fa-3x"></i></a></span>&nbsp;&nbsp;
             <br><br>
-            Copyright &copy; 桜町記録片 2019 - Theme by <a href="https://jeffprod.com" class="mysocial">JeffProd.com</a>
+            Copyright &copy; 桜町記録片 2019 - Theme by <a href="https://jeffprod.com"
+                class="mysocial">JeffProd.com</a>
             - <a class="mysocial" href="https://sheeta38.github.io/blog/about">About</a>
         </p>
     </div>
@@ -251,4 +254,5 @@ Merge made by the 'recursive' strategy.
 
 <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
 </body>
+
 </html>

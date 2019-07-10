@@ -5,6 +5,7 @@
     <description>Recent content in Posts on 桜町記録片</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
+    <copyright>Copyright © 2019, Sheeta Sakuramachi</copyright>
     <lastBuildDate>Mon, 20 May 2019 23:38:17 +0900</lastBuildDate>
     
         <atom:link href="https://sheeta38.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
@@ -16,7 +17,7 @@
       <pubDate>Mon, 20 May 2019 23:38:17 +0900</pubDate>
       
       <guid>https://sheeta38.github.io/blog/2019/sg-exam/</guid>
-      <description>https://www.jitec.ipa.go.jp/sg/ 情報セキュリティマネジメント試験 平成31年度春を受験しました。 午前問題90分、午後問題90分です。 高校生、大学生、専門学校生の割合も高い試</description>
+      <description>https://www.jitec.ipa.go.jp/sg/ 情報セキュリティマネジメント試験 平成 31 年度春を受験しました。 午前問題 90 分、午後問題 90 分です。 高校生、大学生、専門学校生の割合も高い試験です</description>
     </item>
     
     <item>
@@ -29,8 +30,8 @@
 
 &lt;ul&gt;
 &lt;li&gt;Windows10&lt;/li&gt;
-&lt;li&gt;コマンドライン操作はPowerShellを用いる&lt;/li&gt;
-&lt;li&gt;gitをインストール済み&lt;/li&gt;
+&lt;li&gt;コマンドライン操作は PowerShell を用いる&lt;/li&gt;
+&lt;li&gt;git をインストール済み&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;!--001--&gt;</description>
